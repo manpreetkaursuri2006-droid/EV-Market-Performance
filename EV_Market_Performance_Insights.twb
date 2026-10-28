@@ -1,0 +1,79 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<workbook original-version='18.1' source-build='20261.26.1022.1200' source-platform='win' version='18.1' xmlns:user='http://www.tableau.com/xml/user'>
+  <document-format-change-manifest />
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+  </preferences>
+  <datasources>
+    <datasource caption='EV Market Sample Data' inline='true' name='federated.0x1a2b3c4d5e6f7890' version='18.1'>
+      <connection class='textscan' directory='.' filename='Data/ev_market_sample.csv' password='' server='' />
+      <aliases enabled='yes' />
+      <column caption='Year' datatype='integer' name='[Year]' role='dimension' type='quantitative' />
+      <column caption='Manufacturer' datatype='string' name='[Manufacturer]' role='dimension' type='nominal' />
+      <column caption='Model' datatype='string' name='[Model]' role='dimension' type='nominal' />
+      <column caption='Region' datatype='string' name='[Region]' role='dimension' type='nominal' />
+      <column caption='Country' datatype='string' name='[Country]' role='dimension' type='nominal' />
+      <column caption='Annual Sales Units' datatype='integer' name='[Annual Sales Units]' role='measure' type='quantitative' />
+      <column caption='Market Share Pct' datatype='real' name='[Market Share Pct]' role='measure' type='quantitative' />
+      <column caption='Average Range Km' datatype='integer' name='[Average Range Km]' role='measure' type='quantitative' />
+      <column caption='Average Price USD' datatype='integer' name='[Average Price USD]' role='measure' type='quantitative' />
+      <column caption='Data Type' datatype='string' name='[Data Type]' role='dimension' type='nominal' />
+      <metadata-records>
+        <metadata-record class='capability'>
+          <remote-name>EV Market Sample Data</remote-name>
+          <remote-type>textscan</remote-type>
+          <parent-name>[EV Market Sample Data]</parent-name>
+          <remote-alias>EV Market Sample Data</remote-alias>
+          <ordinal>0</ordinal>
+        </metadata-record>
+      </metadata-records>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Manufacturer Sales'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='EV Market Sample Data' name='federated.0x1a2b3c4d5e6f7890' />
+          </datasources>
+          <aggregation value='true' />
+        </view>
+        <style />
+      </table>
+      <simple-id uuid='5D3F1A2B4C5D6E7F8A9B0C1D2E3F4A5B' />
+    </worksheet>
+    <worksheet name='Sales Trend'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='EV Market Sample Data' name='federated.0x1a2b3c4d5e6f7890' />
+          </datasources>
+          <aggregation value='true' />
+        </view>
+        <style />
+      </table>
+      <simple-id uuid='6E4A2B3C5D6E7F8A9B0C1D2E3F4A5B6C' />
+    </worksheet>
+    <worksheet name='Regional Comparison'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='EV Market Sample Data' name='federated.0x1a2b3c4d5e6f7890' />
+          </datasources>
+          <aggregation value='true' />
+        </view>
+        <style />
+      </table>
+      <simple-id uuid='7F5B3C4D6E7F8A9B0C1D2E3F4A5B6C7D' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard name='EV Market Performance Dashboard' show-tabs='yes'>
+      <size maxheight='900' maxwidth='1400' minheight='800' minwidth='1100' sizing-mode='fixed' />
+      <zones>
+        <zone h='100000' id='1' name='Manufacturer Sales' w='100000' x='0' y='0' />
+      </zones>
+    </dashboard>
+  </dashboards>
+  <windows />
+</workbook>
